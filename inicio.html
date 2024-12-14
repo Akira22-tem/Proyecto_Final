@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Request</title>
+    <link rel="stylesheet" href="estilos/diseño.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="menu">
+        <a href="#" class="logo">
+            <img src="complementos/descarga-removebg-preview.png" alt="">
+        </a>
+        <nav class="navbar">
+            <a href="sesion.html">Iniciar Sesion</a>
+            <a href="Generarador.html">Generador </a>
+            <a href="inicio.html">Menu</a>
+            <a href="CRUD.html">CRUD</a>
+        </nav>
+        <div class="iconos">
+            <div class="search" id="search-btn">
+                <i class='bx bx-search-alt-2'></i>
+            </div>
+            <div class="shopping" id="shopping-btn">
+                <i class='bx bx-shopping-bag'></i>
+            </div>
+            <div class="search-form" id="search-form">
+                <input type="search" id="search-box" placeholder="Search here...">
+                <label for="search-box" class="bx bx-search-alt-2 search"></label>
+            </div>
+        </div>
+    </header>
+    <script>
+        document.getElementById('search-btn').addEventListener('click', function () {
+            document.getElementById('search-form').classList.toggle('active');
+        });
+    </script>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="navigation">
+                <form action="">
+                    <h1><i class='bx bxl-spotify'></i> Solicitar una Canción </h1>
+                    <div class="form-group">
+                        <label for="cancion"> <i class='bx bxs-music'></i> Canción:</label>
+                        <input type="text" id="cancion" name="cancion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="artista"> <i class='bx bxs-user-circle'></i> Artista:</label>
+                        <input type="text" id="artista" name="artista" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="genero">Género:</label>
+                        <select id="genero" name="genero" required>
+                            <option value="Pop">Pop</option>
+                            <option value="Jazz">Jazz</option>
+                            <option value="Electronic">Electronic</option>
+                            <option value="Hip Hop">Hip Hop</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Classical">Classical</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Formato:</label>
+                        <div>
+                            <label><input type="radio" name="formato" value="mp3" required> MP3</label>
+                            <label><input type="radio" name="formato" value="flac"> FLAC</label>
+                            <label><input type="radio" name="formato" value="wav"> WAV</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Servicios adicionales:</label>
+                        <div>
+                            <label><input type="checkbox" name="servicio" value="Sencillos"><i
+                                    class='bx bxs-user-circle'></i> Sencillos</label>
+                            <label><input type="checkbox" name="servicio" value="Album"><i class='bx bx-album'></i>
+                                Álbum</label>
+                        </div>
+                    </div>
+                    <button type="submit">Solicitar</button>
+                </form>
+            </nav>
+        </aside>
+        <main class="content">
+            <header class="header">
+                <h1>Sin música la vida sería un error</h1>
+                <p>¿Listo para sumergirte?</p>
+                <button>Solicitar canción</button>
+            </header>
+            <section class="news">
+                <h2>Últimas noticias</h2>
+                <div class="news-cards">
+                    <div class="card Ghost">Ghost</div>
+                    <div class="card Bon">Bon Jovi</div>
+                    <div class="card Toto">Toto</div>
+                    <div class="card">Canciones más escuchadas</div>
+                </div>
+            </section>
+            <section class="playlists">
+                <div class="playlist">
+                    <h3>Mi nuevo playlist</h3>
+                    <div class="music-selector">
+                        <select id="music-select" onchange="document.getElementById('audio-player').src = this.value;">
+                            <option value="audio/Toto.mp3">Hold the Line - Toto</option>
+                            <option value="audio/Bon Jovi - It's My Life.mp3">Bon Jovi - It's My Life</option>
+                            <option value="audio/The Offspring - You're Gonna Go Far, Kid.mp3">The Offspring - You're
+                                Gonna Go Far Kid</option>
+                            <option value="audio/Yoko Takahashi - FLY ME TO THE MOON (2020 Version).mp3">Yoko Takahashi
+                                - FLY ME TO THE MOON</option>
+                        </select>
+                    </div>
+                    <section class="audio">
+                        <center>
+                            <audio id="audio-player" controls>
+                                <source src="audio/Toto.mp3" type="audio/mp3">
+                                <source src="audio/Bon Jovi - It's My Life.mp3" type="audio/mp3">
+                                <source src="audio/Queen - I Want To Break Free.mp3" type="audio/mp3">
+                                <source src="audio/The Offspring - You're Gonna Go Far, Kid.mp3" type="audio/mp3">
+                                <source src="audio/Yoko Takahashi - FLY ME TO THE MOON (2020 Version).mp3"
+                                    type="audio/mp3">
+                            </audio>
+                        </center>
+                    </section>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

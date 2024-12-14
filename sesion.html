@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="estilos/estilos.css" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="menu">
+        <a href="#" class="logo">
+            <img src="complementos/descarga-removebg-preview.png" alt="">
+        </a>
+        <nav class="navbar">
+            <a href="sesion.html">Iniciar Sesion</a>
+            <a href="Generarador.html">Generador </a>
+            <a href="inicio.html">Menu</a>
+            <a href="CRUD.html">CRUD</a>
+        </nav>
+        <div class="iconos">
+            <div class="search" id="search-btn">
+                <i class='bx bx-search-alt-2'></i>
+            </div>
+            <div class="shopping" id="shopping-btn">
+                <i class='bx bx-shopping-bag'></i>
+            </div>
+            <div class="search-form" id="search-form">
+                <input type="search" id="search-box" placeholder="Search here...">
+                <label for="search-box" class="bx bx-search-alt-2 search"></label>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <form action="inicio.html" method="get">
+            <h1>Iniciar Sesion</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Usuario" required>
+                <i class='bx bx-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Contraseña" required>
+                <i class='bx bxs-lock-open-alt'></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Recuerdame</label>
+                <a href="#">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <button type="submit" class="btn">Acceder</button>
+            <div class="register-link">
+                <p>No tiene una cuenta? <a href="Generarador.html">Contraseña Aleatoria</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('search-btn').addEventListener('click', function () {
+            document.getElementById('search-form').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

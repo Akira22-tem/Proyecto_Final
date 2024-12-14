@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --primary-color: #1db954;
+    --secondary-color: #1ed760;
+    --bg-color: rgba(0, 0, 0, 0.6);
+    --text-color: white;
+    --font-family: "Poppins", sans-serif;
+}
+
+/*------------------------------------------------------------------------*/
+
+* {
+    margin: 3px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+/*------------------------------------------------------------------------*/
+body {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url(../complementos/ind.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+    padding-top: 8rem;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+/*------------------------------------------------------------------------*/
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+/*------------------------------------------------------------------------*/
+html::-webkit-scrollbar {
+    width: 8px;
+}
+
+/*------------------------------------------------------------------------*/
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/*------------------------------------------------------------------------*/
+html::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 5px;
+}
+
+/*------------------------------------------------------------------------*/
+
+.menu {
+    background: rgb(2, 2, 2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: 1px solid rgb(38, 35, 35);
+    position: fixed;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-bottom: 2rem;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .logo img {
+    height: 6rem;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .navbar a {
+    float: left;
+    display: block;
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*------------------------------------------------------------------------*/
+
+@media screen and (max-width: 900px) {
+    .menu .navbar a {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+}
+
+/*------------------------------------------------------------------------*/
+.menu .navbar a:hover {
+    color: green;
+    border-bottom: 1px solid green;
+    padding-bottom: 0.5rem;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .iconos {
+    display: flex;
+    align-items: center;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .iconos div {
+    color: white;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .iconos div:hover {
+    color: var(--secondary-color);
+}
+
+/*------------------------------------------------------------------------*/
+
+.menu .search-form {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgb(2, 2, 2);
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*------------------------------------------------------------------------*/
+.menu .search-form input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    color: white;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .search-form input:focus {
+    outline: none;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .search-form.active {
+    display: block;
+}
+
+/*------------------------------------------------------------------------*/
+
+@media screen and (max-width: 900px) {
+
+    .menu .search-form {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+/*------------------------------------------------------------------------*/
+
+@media screen and (max-width: 900px) {
+    .menu .search-form {
+        width: 90%;
+        left: 5%;
+    }
+
+    /*------------------------------------------------------------------------*/
+    .menu .navbar a {
+        font-size: 1.4rem;
+    }
+
+    /*------------------------------------------------------------------------*/
+    .menu .iconos div {
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+
+    /*------------------------------------------------------------------------*/
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*------------------------------------------------------------------------*/
+    .sidebar {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+/*------------------------------------------------------------------------*/
+.menu .search-form {
+    width: 90%;
+    left: 5%;
+}
+
+/*------------------------------------------------------------------------*/
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(28, 55, 208);
+    border: none;
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 16px;
+    cursor: pointer;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+/*------------------------------------------------------------------------*/
+button:hover {
+    background-color: #1e68d7;
+}
+
+/*------------------------------------------------------------------------*/
+button:focus {
+    outline: none;
+}
+
+/*------------------------------------------------------------------------*/
+button:active {
+    transform: scale(0.9);
+}
+
+/*------------------------------------------------------------------------*/
+.container {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    height: 100vh;
+    border-radius: 0px 10px 10px 0px;
+    margin-top: 3rem;
+
+}
+
+/*------------------------------------------------------------------------*/
+.sidebar {
+    width: 300px;
+    background-color: rgba(48, 94, 197, 0.3);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 30px 30px 30px 30px;
+    backdrop-filter: blur(20px);
+    color: var(--text-color);
+}
+
+/*------------------------------------------------------------------------*/
+.sidebar h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+/*------------------------------------------------------------------------*/
+.form-group {
+    margin-bottom: 15px;
+}
+
+/*------------------------------------------------------------------------*/
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/*------------------------------------------------------------------------*/
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.6rem;
+}
+
+/*------------------------------------------------------------------------*/
+
+.news {
+    background: linear-gradient(to right, rgba(48, 94, 197, 0.2), rgb(0, 0, 0));
+
+    padding: 18px;
+    border-radius: 30px 30px 30px 10px;
+    margin-bottom: 8px;
+    backdrop-filter: blur(5px);
+}
+
+/*------------------------------------------------------------------------*/
+.playlists {
+    background: linear-gradient(to bottom right, rgba(48, 94, 197, 0.2), rgb(0, 0, 0));
+    padding: 18px;
+    border-radius: 30px 30px 30px 10px;
+    margin-bottom: 8px;
+    backdrop-filter: blur(5px);
+}
+
+/*------------------------------------------------------------------------*/
+.header {
+    background: linear-gradient(rgba(48, 94, 197, 0.2), rgb(0, 0, 0));
+    padding: 18px;
+    border-radius: 30px 30px 30px 10px;
+    margin-bottom: 8px;
+    backdrop-filter: blur(5px);
+}
+
+/*------------------------------------------------------------------------*/
+.playlists {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/*------------------------------------------------------------------------*/
+.music-selector {
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+/*------------------------------------------------------------------------*/
+.audio {
+    flex: 1;
+    text-align: center;
+}
+
+/*------------------------------------------------------------------------*/
+.news h2 {
+    text-align: center;
+}
+
+/*------------------------------------------------------------------------*/
+.header h1 {
+    margin: 0 0 10px 0;
+}
+
+/*------------------------------------------------------------------------*/
+.header p {
+    text-align: center;
+}
+
+/*------------------------------------------------------------------------*/
+.news-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+/*------------------------------------------------------------------------*/
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/*------------------------------------------------------------------------*/
+.Ghost,
+.Bon,
+.Toto {
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+/*------------------------------------------------------------------------*/
+.Ghost {
+    background-image: url(../complementos/caratula1.jpg);
+}
+
+/*------------------------------------------------------------------------*/
+.Bon {
+    background-image: url(../complementos/caratula2.jpeg);
+}
+
+/*------------------------------------------------------------------------*/
+.Toto {
+    background-image: url(../complementos/caratula\ 3.jpeg);
+}
+
+/*------------------------------------------------------------------------*/
+
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin-top: 1rem;
+        padding-top: 8rem;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .playlists {
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+
+
+}

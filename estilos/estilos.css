@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --primary-color: #1db954;
+    --secondary-color: #1ed760;
+    --bg-color: rgba(0, 0, 0, 0.6);
+    --text-color: white;
+    --font-family: "Poppins", sans-serif;
+}
+
+/*------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+/*------------------------------------------------------------------------*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url(../complementos/ind.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding-top: 8rem;
+    color: var(--text-color);
+}
+
+/*------------------------------------------------------------------------*/
+.wrapper {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 30px;
+    padding: 30px 40px;
+    margin: 20px;
+    margin-bottom: 3rem;
+    margin-top: 6rem;
+}
+
+/*------------------------------------------------------------------------*/
+.wrapper h1 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*------------------------------------------------------------------------*/
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+/*------------------------------------------------------------------------*/
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 1.6rem;
+    color: white;
+    padding: 0 20px;
+}
+
+/*------------------------------------------------------------------------*/
+.input-box input::placeholder {
+    color: white;
+}
+
+/*------------------------------------------------------------------------*/
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+}
+
+/*------------------------------------------------------------------------*/
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    margin: -15px 0 15px;
+}
+
+/*------------------------------------------------------------------------*/
+.remember-forgot label input {
+    accent-color: white;
+    margin-right: 5px;
+}
+
+/*------------------------------------------------------------------------*/
+.remember-forgot a {
+    color: white;
+    text-decoration: none;
+}
+
+/*------------------------------------------------------------------------*/
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/*------------------------------------------------------------------------*/
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/*------------------------------------------------------------------------*/
+.wrapper .register-link {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+/*------------------------------------------------------------------------*/
+.register-link p {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+/*------------------------------------------------------------------------*/
+.register-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/*------------------------------------------------------------------------*/
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+/*------------------------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+    .wrapper {
+        padding: 20px;
+        margin: 10px;
+        margin-top: 6rem;
+        padding-top: 6rem;
+    }
+
+    .wrapper h1 {
+        font-size: 28px;
+    }
+
+    .input-box {
+        margin: 20px 0;
+    }
+
+    .remember-forgot {
+        font-size: 14px;
+    }
+
+    .wrapper .register-link {
+        font-size: 14px;
+    }
+}
+
+/*------------------------------------------------------------------------*/
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+/*------------------------------------------------------------------------*/
+html::-webkit-scrollbar {
+    width: 8px;
+}
+
+/*------------------------------------------------------------------------*/
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/*------------------------------------------------------------------------*/
+html::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 5px;
+}
+
+/*------------------------------------------------------------------------*/
+.menu {
+    background: rgb(2, 2, 2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: 1px solid rgb(38, 35, 35);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-bottom: 2rem;
+}
+
+/*------------------------------------------------------------------------*/
+
+.menu .logo img {
+    height: 6rem;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .navbar a {
+    float: left;
+    display: block;
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*------------------------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+    .menu .navbar a {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+
+    }
+}
+
+/*------------------------------------------------------------------------*/
+.menu .navbar a:hover {
+    color: green;
+    border-bottom: 1px solid green;
+    padding-bottom: 0.5rem;
+}
+
+/*------------------------------------------------------------------------*/
+
+.menu .iconos {
+    display: flex;
+    align-items: center;
+}
+
+/*------------------------------------------------------------------------*/
+
+.menu .iconos div {
+    color: rgb(253, 246, 246);
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .iconos div:hover {
+    color: var(--secondary-color);
+}
+
+/*------------------------------------------------------------------------*/
+.menu .search-form {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgb(2, 2, 2);
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*------------------------------------------------------------------------*/
+.menu .search-form input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    color: white;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .search-form input:focus {
+    outline: none;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .search-form.active {
+    display: block;
+}
+
+/*------------------------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+    .menu .search-form {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+/*------------------------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+    .menu .search-form {
+        width: 90%;
+        left: 5%;
+    }
+
+    /*------------------------------------------------------------------------*/
+    .menu .navbar a {
+        font-size: 1.4rem;
+    }
+
+    /*------------------------------------------------------------------------*/
+    .menu .iconos div {
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+
+    /*------------------------------------------------------------------------*/
+    .wrapper {
+        width: 90%;
+        padding: 20px;
+
+    }
+
+    /*------------------------------------------------------------------------*/
+    .wrapper h1 {
+        font-size: 2rem;
+    }
+
+    /*------------------------------------------------------------------------*/
+    .input-box input {
+        font-size: 1.4rem;
+    }
+
+    /*------------------------------------------------------------------------*/
+    .input-box i {
+        font-size: 1.8rem;
+    }
+
+    /*------------------------------------------------------------------------*/
+    .remember-forgot {
+        font-size: 1.2rem;
+    }
+
+    /*------------------------------------------------------------------------*/
+    .wrapper .btn {
+        font-size: 1.4rem;
+    }
+
+    /*------------------------------------------------------------------------*/
+    .register-link {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --primary-color: #1db954;
+    --secondary-color: #1ed760;
+    --bg-color: rgba(0, 0, 0, 0.6);
+    --text-color: white;
+    --font-family: "Poppins", sans-serif;
+}
+
+/*------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+/*------------------------------------------------------------------------*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url(../complementos/cinco.png);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    color: var(--text-color);
+    padding-top: 8rem;
+}
+
+/*------------------------------------------------------------------------*/
+
+.badge {
+    font-size: 50px;
+}
+
+/*------------------------------------------------------------------------*/
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+/*------------------------------------------------------------------------*/
+html::-webkit-scrollbar {
+    width: 8px;
+}
+
+/*------------------------------------------------------------------------*/
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/*------------------------------------------------------------------------*/
+html::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 5px;
+}
+
+/*------------------------------------------------------------------------*/
+.menu {
+    background: rgb(2, 2, 2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: 1px solid rgb(38, 35, 35);
+    position: fixed;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-bottom: 2rem;
+}
+
+/*------------------------------------------------------------------------*/
+
+.menu .logo img {
+    height: 6rem;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .navbar a {
+    float: left;
+    display: block;
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*------------------------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+    .menu .navbar a {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+
+    }
+}
+
+/*------------------------------------------------------------------------*/
+.menu .navbar a:hover {
+    color: green;
+    border-bottom: 1px solid green;
+    padding-bottom: 0.5rem;
+}
+
+/*------------------------------------------------------------------------*/
+
+.menu .iconos {
+    display: flex;
+    align-items: center;
+}
+
+/*------------------------------------------------------------------------*/
+
+.menu .iconos div {
+    color: rgb(253, 246, 246);
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .iconos div:hover {
+    color: var(--secondary-color);
+}
+
+/*------------------------------------------------------------------------*/
+.menu .search-form {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgb(2, 2, 2);
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*------------------------------------------------------------------------*/
+.menu .search-form input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    color: white;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .search-form input:focus {
+    outline: none;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .search-form.active {
+    display: block;
+}
+
+/*------------------------------------------------------------------------*/
+
+@media screen and (max-width: 900px) {
+
+    .menu .search-form {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+/*------------------------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+    .menu .search-form {
+        width: 80%;
+        left: 5%;
+    }
+
+    .menu .navbar a {
+        font-size: 1.4rem;
+    }
+
+    .menu .iconos div {
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+
+}
+
+/*------------------------------------------------------------------------*/
+.menu .search-form {
+    width: 90%;
+    left: 5%;
+}
+
+
+/*------------------------------------------------------------------------*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    max-width: 800px;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*------------------------------------------------------------------------*/
+.container .row {
+    width: 100%;
+    max-width: 600px;
+}
+
+/*------------------------------------------------------------------------*/
+.container .row .col {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 30px;
+    padding: 50px 60px;
+    margin: 20px;
+    margin-bottom: 3rem;
+    margin-top: 6rem;
+}
+
+/*------------------------------------------------------------------------*/
+h3 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*------------------------------------------------------------------------*/
+label {
+    font-size: 1.8rem;
+}
+
+/*------------------------------------------------------------------------*/
+.form-control,
+.form-check-label,
+.btn {
+    font-size: 1rem;
+}
+
+/*------------------------------------------------------------------------*/
+.badge {
+    font-size: 3rem;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .navbar a {
+    font-size: 1.6rem;
+}
+
+/*------------------------------------------------------------------------*/
+.menu .iconos div {
+    font-size: 3rem;
+}
+
+/*------------------------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+        margin-top: 6rem;
+        padding-top: 6rem;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
